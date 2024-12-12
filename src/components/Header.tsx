@@ -8,8 +8,18 @@ export function Header() {
     <header className="fixed w-full top-0 z-50 bg-background border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
-            {/* Logo maior */}
+          {/* Menu de navegação para telas pequenas, alinhado à esquerda */}
+          <div className="md:hidden flex items-center space-x-4">
+            <button
+              className="p-2 text-foreground"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
+
+          {/* Logo no centro para telas pequenas e à esquerda para telas grandes */}
+          <div className="flex justify-center items-center w-full sm:w-auto">
             <img
               src="https://i.imgur.com/OwLoybs.jpeg"
               alt="Logo"
@@ -19,6 +29,7 @@ export function Header() {
               Soluções Financeiras
             </span>
           </div>
+
           {/* Menu de navegação para telas médias e maiores */}
           <nav className="hidden md:flex space-x-8">
             <a href="#simulator" className="text-muted-foreground hover:text-foreground transition-colors">
@@ -34,16 +45,6 @@ export function Header() {
               Contato
             </a>
           </nav>
-
-          {/* Ícone de menu para telas pequenas */}
-          <div className="md:hidden flex items-center space-x-4">
-            <button
-              className="p-2 text-foreground"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
-          </div>
 
           {/* Botão "Simule agora" */}
           <div className="flex items-center space-x-4">
