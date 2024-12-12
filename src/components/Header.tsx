@@ -1,6 +1,5 @@
 import React from 'react';
-import { Menu, Calculator } from 'lucide-react';
-import { ThemeToggle } from './ThemeToggle';
+import { Calculator } from 'lucide-react';
 
 export function Header() {
   return (
@@ -8,8 +7,13 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <Menu className="h-8 w-8 text-foreground" />
-            <span className="ml-2 text-xl font-bold text-foreground">HFS Soluções</span>
+            {/* Logo maior */}
+            <img
+              src="https://i.imgur.com/OwLoybs.jpeg"
+              alt="Logo"
+              className="h-12" // Logo maior
+            />
+            <span className="ml-2 text-xl font-bold text-foreground">Soluções Financeiras</span>
           </div>
           <nav className="hidden md:flex space-x-8">
             <a href="#simulator" className="text-muted-foreground hover:text-foreground transition-colors">
@@ -26,7 +30,6 @@ export function Header() {
             </a>
           </nav>
           <div className="flex items-center space-x-4">
-            <ThemeToggle />
             <button className="flex items-center px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors">
               <Calculator className="h-4 w-4 mr-2" />
               Simule agora

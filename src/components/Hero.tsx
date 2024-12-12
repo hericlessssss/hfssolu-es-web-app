@@ -14,7 +14,7 @@ export function Hero() {
               Taxas reduzidas para servidores, aposentados e pensionistas do INSS. 
               Simule agora e descubra suas condições especiais.
             </p>
-            <button className="flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 text-lg">
+            <button className="flex items-center px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 text-lg">
               <Calculator className="h-5 w-5 mr-2" />
               Quero Simular Meu Empréstimo
             </button>

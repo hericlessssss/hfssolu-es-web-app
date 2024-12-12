@@ -62,7 +62,7 @@ export function LoanSimulator() {
             </div>
             <button
               type="submit"
-              className="w-full flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+              className="w-full flex items-center justify-center px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800"
             >
               <Calculator className="h-5 w-5 mr-2" />
               Calcular Parcelas
