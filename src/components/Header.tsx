@@ -46,8 +46,8 @@ export function Header() {
             </a>
           </nav>
 
-          {/* Botão "Simule agora" */}
-          <div className="flex items-center space-x-4">
+          {/* Botão "Simule agora" visível apenas em telas grandes */}
+          <div className="flex items-center space-x-4 hidden md:flex">
             <button className="flex items-center px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors">
               <Calculator className="h-4 w-4 mr-2" />
               Simule agora
@@ -71,6 +71,11 @@ export function Header() {
           <a href="#contact" className="block text-muted-foreground hover:text-foreground transition-colors">
             Contato
           </a>
+          {/* Botão "Simule agora" dentro do menu lateral */}
+          <button className="flex items-center px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors">
+            <Calculator className="h-4 w-4 mr-2" />
+            Simule agora
+          </button>
         </div>
       )}
     </header>
